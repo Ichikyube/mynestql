@@ -1,0 +1,28 @@
+http:
+  host: 'localhost'
+  port: 3000
+db:
+  mongodb:
+    uri: 'mongodb+srv://<username>:<password>@cluster0.kngtf.mongodb.net/catdb?retryWrites=true&w=majority'
+
+mongoose:
+  connectTimeout: 10000
+  socketTimeout: 30000
+  useNewUrlParser: true
+  useUnifiedTopology: true
+
+elasticsearch:
+  node: 'http://localhost:9200'
+  host: elasticsearch
+  port: 9200
+
+session:
+  secret: 'keyboard cat'
+  resave: false
+  saveUninitialized: false
+  store:
+    type: 'pg'
+    tableName: 'session'
+  cookie:
+    secure: false
+    maxAge: 86400000 # 1 day in milliseconds
